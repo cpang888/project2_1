@@ -14,13 +14,36 @@ $(document).ready(function() {
 
   function initializeRows() {
     console.log("initializeRow...");
-    // blogContainer.empty();
-    // var postsToAdd = [];
     for (var i = 0; i < cars.length; i++) {
-      //   postsToAdd.push(createNewRow(posts[i]));
       console.log(cars[i]);
+      $("#admincarTbody").append(
+        "<tr>" +
+          "<td>" +
+          cars[i].year +
+          "</td>" +
+          "<td>" +
+          cars[i].make +
+          "</td>" +
+          "<td>" +
+          cars[i].model +
+          "</td>" +
+          "<td>" +
+          cars[i].engine +
+          "</td>" +
+          "<td>" +
+          cars[i].gasType +
+          "</td>" +
+          "<td>" +
+          cars[i].vinNum +
+          "</td>" +
+          "<th scope='col'><button type='button' class='btn btn-outline-info' data-toggle='modal' " +
+          "data-target='#editUser'>Edit</button></th>" +
+          "<th scope='col'><button type='button' class='btn btn-outline-danger' data-toggle='modal' " +
+          "data-target='#deleteUser'>Delete</button></th>" +
+          "</tr>"
+      );
     }
-    // blogContainer.append(postsToAdd);
+
   }
 
   // Getting the initial list of cars

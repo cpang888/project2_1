@@ -37,32 +37,32 @@
       </button>
     </div>
     <div class="modal-body">
-      <form>
+      <form method = "post" action="/api/car?_method=PUT">
         <div class="form-group">
-          <input type="text" class="form-control" id="user-name" placeholder="YEAR">
+          <input type="text" class="form-control" id="user-name" name="year" placeholder="YEAR">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="driver-license" placeholder="MAKE">
+          <input type="text" class="form-control" id="driver-license" name="make" placeholder="MAKE">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="user-phone" placeholder="MODEL">
+          <input type="text" class="form-control" id="user-phone" name="model" placeholder="MODEL">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="user-company" placeholder="VIN#">
+          <input type="text" class="form-control" id="user-company" name="vinNum" placeholder="VIN#">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="user-company" placeholder="ENGINE">
+          <input type="text" class="form-control" id="user-company" name="engine" placeholder="ENGINE">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="user-company" placeholder="GAS TYPE">
+          <input type="text" class="form-control" id="user-company" name="gasType" placeholder="GAS TYPE">
         </div>
-      
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn button-new-user">Submit Car</button>
+        </div>      
       </form>
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      <button type="button" class="btn button-new-user">Submit Car</button>
-    </div>
+
   </div>
 </div>
 </div>
@@ -78,10 +78,11 @@
           <th scope="col">Engine</th>
           <th scope="col">Gas Type</th>
           <th scope="col">Vin #</th>
-          <th scope="col">Edit/Delete</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="admincarTbody">
         {{#each cars}}
                   <tr>
                     {{!-- <th scope="row">1</th> --}}

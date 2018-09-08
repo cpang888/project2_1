@@ -32,7 +32,7 @@ module.exports = function(app) {
     }
     */
     // db.Drivers.create(newDriver).then(function(dbExample) {
-      console.log("******create user");
+    console.log("******create user");
     db.Drivers.create({
       id: req.body.driverlicense,
       fullName: req.body.fullname,
@@ -76,8 +76,16 @@ module.exports = function(app) {
       "gasType": "regular"
     }   
     */
-    db.Cars.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+    db.Cars.create({
+      vinNum: req.body.vinNum,
+      year: req.body.year,
+      model: req.body.model,
+      make: req.body.make,
+      engine: req.body.engine,
+      gasType: req.body.gasType
+    }).then(function(dbExample) {
+      // res.json(dbExample);
+      res.redirect("/car");
     });
   });
 
