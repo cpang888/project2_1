@@ -1,0 +1,50 @@
+/* ======================================================
+======= USER HOME PAGE ADD ======================*/
+body{
+    background: url("../img/user_add.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.add-user{
+    padding: 30px;
+}
+
+h1{
+    color: #fff;
+}
+
+    .add-user .button-add{
+        background: rgba(10, 43, 114, 0.8);
+        color: #fff;  
+       
+        }
+
+.button-new-user{
+    background: rgba(10, 43, 114, 0.8);
+        color: #fff;    
+}     
+.user-add-car{
+    background: rgba(10, 43, 114, 0.8);
+        color: #fff; 
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.division-title{
+    background: #fff;
+}
+
+
+.button-add-car{
+    background: rgba(119, 0, 0, 0.8);
+        color: #fff;    
+        -webkit-box-shadow: 5px 4px 14px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow:    5px 4px 14px 0px rgba(50, 50, 50, 0.75);
+        box-shadow:         5px 4px 14px 0px rgba(50, 50, 50, 0.75);  
+}  
